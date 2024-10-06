@@ -8,11 +8,16 @@ import { FaFacebookF } from "react-icons/fa6";
 
 export default function Footer() {
     return (
-      <footer className="bg-gray-900 text-white pt-8">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+      <footer className="bg-black text-white">
+        <div className="bg-black-800 py-4 border-b border-white pb-2">
+          <div className="container mx-auto text-center text-sm">
+            &copy; 2024 Todos os direitos reservados & Baterias FIRE
+          </div>
+        </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pt-4">
           {/* Institucional */}
           <div>
-            <h3 className="font-bold mb-4">INSTITUCIONAL</h3>
+            <h3 className="font-bold mb-4 border-b border-white pb-2">INSTITUCIONAL</h3>
             <ul>
               <li><a href="#" className="hover:underline">Home</a></li>
               <li><a href="#" className="hover:underline">FAQ</a></li>
@@ -25,7 +30,7 @@ export default function Footer() {
   
           {/* Produtos */}
           <div>
-            <h3 className="font-bold mb-4">PRODUTOS</h3>
+            <h3 className="font-bold mb-4 border-b border-white pb-2">PRODUTOS</h3>
             <ul>
               <li><a href="#" className="hover:underline">Balcão</a></li>
               <li><a href="#" className="hover:underline">Baterias para Veículos Elétricos</a></li>
@@ -37,22 +42,32 @@ export default function Footer() {
           </div>
           <div>
             {/* Contato */}
-            <div>
-              <h3 className="font-bold">CONTATO</h3>
+            <div className="md:col-span-2">
+              <h3 className="font-bold border-b border-white pb-2 w-full">CONTATO</h3>
               <ul className="space-y-2 py-4">
                 <li className="flex items-center space-x-8">
-                  <FaWhatsapp className="text-4xl"/>
-                  <BsFillTelephoneFill className="text-4xl"/>
-                  <MdOutlineEmail className="text-4xl" />
-                  <FaInstagram className="text-4xl" />
-                  <FaFacebookF className="text-4xl" />
+                  <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
+                    <FaWhatsapp className="text-4xl" />
+                  </a>
+                  <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
+                    <BsFillTelephoneFill className="text-4xl"/>
+                  </a>
+                  <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
+                    <MdOutlineEmail className="text-4xl" />
+                  </a>
+                  <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-4xl" />
+                  </a>
+                  <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
+                    <FaFacebookF className="text-4xl" />
+                  </a>
                 </li>
               </ul>
             </div>
     
             {/* Lojas Físicas */}
-            <div>
-              <h3 className="font-bold mb-4">LOJAS FÍSICAS</h3>
+            <div className="md:col-span-2">
+              <h3 className="font-bold mb-4 border-b border-white pb-2 w-full">LOJAS FÍSICAS</h3>
               <ul className="flex flex-nowrap space-x-8">
                 <li className="whitespace-nowrap mb-4">
                   <strong>PORTO FERREIRA - SP</strong>
@@ -60,18 +75,12 @@ export default function Footer() {
                   <p>(19) 3581-4077</p>
                   <p>(19) 99336-1557</p>
                 </li>
-                <li className="whitespace-nowrap mb-4">
-                  <strong>RIBEIRÃO PRETO - SP</strong>
-                  <p>Av. Wladimir Meirelles Ferreira, 1795</p>
-                  <p>(16) 3632-2805</p>
-                  <p>(16) 99152-6536</p>
-                </li>
               </ul>
             </div>
           </div>
         </div>
         
-        <div className="bg-gray-800 py-4">
+        <div className="bg-black-200 py-4 border-y border-white pb-2 w-full">
           <div className="container mx-auto text-center text-sm">
             &copy; 2024 Todos os direitos reservados & Baterias FIRE
           </div>
