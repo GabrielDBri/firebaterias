@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #d4cece;
+    --background: #0b0606;
     --foreground: #ededed;
   }
 }
@@ -26,3 +26,9 @@ body {
     text-wrap: balance;
   }
 }
+
+html {
+  color-scheme: light dark;
+}
+
+

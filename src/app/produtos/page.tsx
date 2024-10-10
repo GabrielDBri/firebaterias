@@ -1,11 +1,19 @@
-// src/app/produtos/page.tsx
-export default function ProdutosPage() {
-    return (
-      <section className="p-8">
-        <h1 className="text-3xl font-bold mb-4">Nossos Produtos</h1>
-        <p>Aqui estão as baterias que temos à venda.</p>
-        {/* Aqui você pode listar os produtos */}
-      </section>
-    );
-  }
-  
+import Banner from '../componentes/comp2/banner';
+import ListaProdutos from '../componentes/listatiposbateria';
+import ListaBeneficios from '../componentes/listabeneficios';
+import ListaProdutosPopulares from '../componentes/listaprodutos';
+import Banner2 from '../componentes/comp2/banner2';
+
+const Home = () => {
+  return (
+    <div>
+      <Banner />
+      <ListaProdutos />
+      <ListaBeneficios />
+      <Banner2/>
+      <ListaProdutosPopulares />
+    </div>
+  );
+};
+
+export default Home;
