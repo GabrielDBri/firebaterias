@@ -8,7 +8,7 @@ export default function Header() {
         <div className="text-lg font-bold">
           <Link href="/">
               <Image
-                src="/images/firesbateria.png" // Caminho da imagem na pasta public
+                src="/logo1.png" // Caminho da imagem na pasta public
                 alt="Fire Baterias"
                 width={200} // Ajuste a largura conforme necessário
                 height={200} // Ajuste a altura conforme necessário
