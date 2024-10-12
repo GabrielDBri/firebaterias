@@ -5,7 +5,7 @@ const Banner = () => {
     <div className="relative text-center">
       {/* Imagem do banner */}
       <Image
-        src="/banner1.jpg"  // Caminho da imagem na pasta public
+        src="/banner1.jpeg"  // Caminho da imagem na pasta public
         alt="Banner de Fire Baterias"
         width={1200}  // Defina o tamanho desejado
         height={500}  // Defina o tamanho desejado
