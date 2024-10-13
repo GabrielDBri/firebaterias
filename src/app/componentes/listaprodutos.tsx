@@ -19,9 +19,10 @@ interface Produto {
 interface ListaDeProdutosProps {
   modeloSelecionado: string;
   tipoBateria: string;
+  descricaoModelo: string; // Adiciona a descrição do modelo como prop
 }
 
-const ListaDeProdutos = ({ modeloSelecionado, tipoBateria }: ListaDeProdutosProps) => {
+const ListaDeProdutos = ({ modeloSelecionado, tipoBateria, descricaoModelo }: ListaDeProdutosProps) => {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   useEffect(() => {
@@ -33,11 +34,7 @@ const ListaDeProdutos = ({ modeloSelecionado, tipoBateria }: ListaDeProdutosProp
         }
 
         const data = await response.json();
-        console.log("Dados carregados:", data);
-
         const bateriaSelecionada = data.baterias.find((bateria: any) => bateria.tipo === tipoBateria);
-        console.log("Bateria selecionada:", bateriaSelecionada);
-
         if (!bateriaSelecionada) {
           console.error("Tipo de bateria não encontrado:", tipoBateria);
           setProdutos([]);
@@ -45,10 +42,7 @@ const ListaDeProdutos = ({ modeloSelecionado, tipoBateria }: ListaDeProdutosProp
         }
 
         const modelo = bateriaSelecionada.modelos.find((mod: any) => mod.id === modeloSelecionado);
-        console.log("Modelo encontrado:", modelo);
-
         if (modelo && modelo.produtos) {
-          console.log("Produtos encontrados para o modelo:", modelo.produtos);
           setProdutos(modelo.produtos);
         } else {
           console.error("Modelo não encontrado ou sem produtos:", modeloSelecionado);
@@ -64,7 +58,9 @@ const ListaDeProdutos = ({ modeloSelecionado, tipoBateria }: ListaDeProdutosProp
 
   return (
     <section className="container mx-auto p-8 bg-gray-800 bg-opacity-40 rounded-lg">
-      <h2 className="text-3xl font-bold text-center mb-8 text-white">Produtos Filtrados</h2>
+      {/* Exibe a descrição do modelo selecionado */}
+      <h2 className="text-3xl font-bold text-center mb-8 text-white">{descricaoModelo}</h2>
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {produtos.length > 0 ? (
           produtos.map((produto, index) => (

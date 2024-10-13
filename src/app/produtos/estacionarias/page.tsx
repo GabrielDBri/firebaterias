@@ -1,4 +1,3 @@
-// pages/produtos/estacionarias/page.tsx
 "use client";
 import Banner from "../banner";
 import ListaModelos from "../ListaModelos";
@@ -11,7 +10,8 @@ const Estacionarias = () => {
         titulo="Estacionárias"
         descricao="Baterias estacionárias para backup"
       />
-      <ListaModelos />
+      {/* Passando o tipoBateria para ListaModelos */}
+      <ListaModelos tipoBateria="estacionarias" />
     </div>
   );
 };

@@ -1,13 +1,19 @@
-import ProdutoTabela from '../../componentes/listaprodutos';
+"use client";
+import Banner from "../banner";
+import ListaModelos from "../ListaModelos";
 
-const VeiculosLeves = () => {
+const Solar = () => {
   return (
     <div>
-      <h1>Produtos para Veículos Leves</h1>
-      {/* Renderizar o conteúdo específico, como uma lista ou tabela de produtos */}
-      <ProdutoTabela />
+      <Banner
+        imagem="/images/solar.webp"
+        titulo="Solares"
+        descricao="Baterias Solares"
+      />
+      {/* Passando o tipoBateria para ListaModelos */}
+      <ListaModelos tipoBateria="solares" />
     </div>
   );
 };
 
-export default VeiculosLeves;
+export default Solar;
