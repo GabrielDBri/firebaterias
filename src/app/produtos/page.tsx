@@ -11,7 +11,6 @@ const Home = () => {
       <ListaProdutos />
       <ListaBeneficios />
       <Banner2/>
-      <ListaProdutosPopulares />
     </div>
   );
 };
