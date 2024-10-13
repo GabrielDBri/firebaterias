@@ -1,0 +1,193 @@
+{
+  "baterias": [
+    {
+      "tipo": "veiculos-leves",
+      "titulo": "Veículos leves",
+      "descricao": "Baterias para veículos leves",
+      "imagem": "/images/veiculosleve.webp",
+      "modelos": [
+        {
+          "id": "light-24",
+          "titulo": "Light 24 Meses",
+          "descricao": "Baterias para veículos leves com 24 meses de garantia",
+          "imagem": "/images/light-24.webp",
+          "produtos": [
+            {
+              "codigo": "VL100",
+              "imagem": "/images/light-produto1.jpg",
+              "dimensoes": "200 x 170 x 160",
+              "capacidade_c100": "35 Ah",
+              "capacidade_c20": "29 Ah",
+              "capacidade_c10": "22 Ah",
+              "garantia": "24 meses",
+              "terminal": "M",
+              "peso": "8,5 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "light-24"
+            },
+            {
+              "codigo": "VL200",
+              "imagem": "/images/light-produto2.jpg",
+              "dimensoes": "210 x 180 x 170",
+              "capacidade_c100": "45 Ah",
+              "capacidade_c20": "38 Ah",
+              "capacidade_c10": "30 Ah",
+              "garantia": "24 meses",
+              "terminal": "M",
+              "peso": "9,5 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "light-24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "veiculos-pesados",
+      "titulo": "Veículos pesados",
+      "descricao": "Baterias para veículos pesados",
+      "imagem": "/images/caminhoes.webp",
+      "modelos": [
+        {
+          "id": "heavy-24",
+          "titulo": "Heavy 24 Meses",
+          "descricao": "Baterias robustas para veículos pesados com 24 meses de garantia",
+          "imagem": "/images/heavy-24.webp",
+          "produtos": [
+            {
+              "codigo": "VP100",
+              "imagem": "/images/heavy-produto1.jpg",
+              "dimensoes": "330 x 170 x 240",
+              "capacidade_c100": "150 Ah",
+              "capacidade_c20": "130 Ah",
+              "capacidade_c10": "120 Ah",
+              "garantia": "24 meses",
+              "terminal": "H",
+              "peso": "30 kg",
+              "manutencao": "Baixa Manutenção",
+              "modeloId": "heavy-24"
+            },
+            {
+              "codigo": "VP200",
+              "imagem": "/images/heavy-produto2.jpg",
+              "dimensoes": "350 x 180 x 250",
+              "capacidade_c100": "180 Ah",
+              "capacidade_c20": "160 Ah",
+              "capacidade_c10": "140 Ah",
+              "garantia": "24 meses",
+              "terminal": "H",
+              "peso": "35 kg",
+              "manutencao": "Baixa Manutenção",
+              "modeloId": "heavy-24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "solares",
+      "titulo": "Solares",
+      "descricao": "Baterias para sistemas solares",
+      "imagem": "/images/solar.webp",
+      "modelos": [
+        {
+          "id": "solar-24",
+          "titulo": "Solar 24 Meses",
+          "descricao": "Baterias para sistemas solares com 24 meses de garantia",
+          "imagem": "/images/solar-24.webp",
+          "produtos": [
+            {
+              "codigo": "SL100",
+              "imagem": "/images/solar-produto1.jpg",
+              "dimensoes": "250 x 170 x 220",
+              "capacidade_c100": "100 Ah",
+              "capacidade_c20": "85 Ah",
+              "capacidade_c10": "70 Ah",
+              "garantia": "24 meses",
+              "terminal": "S",
+              "peso": "22 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "solar-24"
+            },
+            {
+              "codigo": "SL200",
+              "imagem": "/images/solar-produto2.jpg",
+              "dimensoes": "270 x 180 x 230",
+              "capacidade_c100": "120 Ah",
+              "capacidade_c20": "105 Ah",
+              "capacidade_c10": "90 Ah",
+              "garantia": "24 meses",
+              "terminal": "S",
+              "peso": "25 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "solar-24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "estacionarias",
+      "titulo": "Estacionárias",
+      "descricao": "Baterias estacionárias para backup",
+      "imagem": "/images/estacionarios.webp",
+      "modelos": [
+        {
+          "id": "truforce-24",
+          "titulo": "Truforce EFB 24 Meses",
+          "descricao": "Baterias estacionárias com 24 meses de garantia",
+          "imagem": "/images/truforce-24.webp",
+          "produtos": [
+            {
+              "codigo": "ES100",
+              "imagem": "/images/truforce-produto1.jpg",
+              "dimensoes": "310 x 170 x 220",
+              "capacidade_c100": "100 Ah",
+              "capacidade_c20": "85 Ah",
+              "capacidade_c10": "75 Ah",
+              "garantia": "24 meses",
+              "terminal": "E",
+              "peso": "25 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "truforce-24"
+            },
+            {
+              "codigo": "ES200",
+              "imagem": "/images/truforce-produto2.jpg",
+              "dimensoes": "340 x 190 x 230",
+              "capacidade_c100": "120 Ah",
+              "capacidade_c20": "105 Ah",
+              "capacidade_c10": "90 Ah",
+              "garantia": "24 meses",
+              "terminal": "E",
+              "peso": "28 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "truforce-24"
+            }
+          ]
+        },
+        {
+          "id": "maxfor-18",
+          "titulo": "Maxfor 18 Meses",
+          "descricao": "Baterias estacionárias com 18 meses de garantia",
+          "imagem": "/images/maxfor-18.webp",
+          "produtos": [
+            {
+              "codigo": "ES300",
+              "imagem": "/images/maxfor-produto1.jpg",
+              "dimensoes": "360 x 200 x 240",
+              "capacidade_c100": "150 Ah",
+              "capacidade_c20": "130 Ah",
+              "capacidade_c10": "110 Ah",
+              "garantia": "18 meses",
+              "terminal": "M",
+              "peso": "32 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "maxfor-18"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

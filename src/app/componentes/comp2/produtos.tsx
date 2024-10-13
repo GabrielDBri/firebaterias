@@ -1,33 +1,75 @@
-// components/ProdutoCard.tsx
 import Image from "next/image";
 
-interface ProdutoCardProps {
+interface Produto {
+  codigo: string;
   imagem: string;
-  nome: string;
-  preco: string;
+  dimensoes: string;
+  capacidade_c100: string;
+  capacidade_c20: string;
+  capacidade_c10: string;
+  garantia: string;
+  terminal: string;
+  peso: string;
+  manutencao: string;
 }
 
-const ProdutoCard = ({ imagem, nome, preco }: ProdutoCardProps) => {
-  // Link dinâmico para o WhatsApp
-  const whatsappLink = `https://wa.me/55XXXXXXXXXXX?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20produto%20${encodeURIComponent(
-    nome
-  )}%20que%20custa%20${encodeURIComponent(preco)}.%20Poderia%20me%20ajudar?`;
-
+const ProdutoTabela = ({ produto }: { produto: Produto }) => {
   return (
-    <div className="text-center border border-gray-300 rounded-lg p-4 shadow-sm">
-      <Image src={imagem} alt={nome} width={200} height={200} className="mx-auto mb-4" />
-      <h3 className="text-xl font-bold text-black">{nome}</h3> {/* Cor do título em preto */}
-      <p className="text-black">{preco}</p> {/* Cor do preço em preto */}
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-red-600 text-white px-6 py-2 rounded-md mt-4 inline-block" // "Comprar" permanece branco sobre fundo vermelho
-      >
-        Comprar
-      </a>
+    <div className="bg-gray-100 rounded-lg shadow-md relative">
+      {/* Cabeçalho com código do produto e imagem */}
+      <div className="bg-gray-400 text-white flex items-center p-4 relative h-24">
+        <div className="absolute -top-8 left-4">
+          <Image
+            src={produto.imagem}
+            alt={produto.codigo}
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+        </div>
+        <h3 className="ml-auto text-lg font-bold pr-4">{produto.codigo}</h3>
+      </div>
+
+      {/* Tabela de especificações */}
+      <table className="w-full text-center border-collapse border border-black mt-4">
+        <tbody>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">DIMENSÕES</td>
+            <td className="p-2 border-black text-black">{produto.dimensoes}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C100</td>
+            <td className="p-2 border-black text-black">{produto.capacidade_c100}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C20</td>
+            <td className="p-2 border-black text-black">{produto.capacidade_c20}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C10</td>
+            <td className="p-2 border-black text-black">{produto.capacidade_c10}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">GARANTIA</td>
+            <td className="p-2 border-black text-black">{produto.garantia}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">TIPO DE TERMINAL</td>
+            <td className="p-2 border-black text-black">{produto.terminal}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">PESO</td>
+            <td className="p-2 border-black text-black">{produto.peso}</td>
+          </tr>
+          <tr className="border border-black">
+            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black" colSpan={2}>
+              {produto.manutencao}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default ProdutoCard;
+export default ProdutoTabela;
