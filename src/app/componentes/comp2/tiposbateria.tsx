@@ -18,7 +18,7 @@ const Produto = ({ imagem, titulo }: ProdutoProps) => {
         loading="lazy"
       />
       {/* Barra inferior com título */}
-      <div className="absolute bottom-0 w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white text-center py-2">
+      <div className="absolute bottom-0 w-full bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-2">
         <h3 className="text-lg font-semibold">{titulo}</h3>
       </div>
     </div>

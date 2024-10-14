@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
+import ScrollToTop from "./componentes/ScrollToTop";
+import WhatsAppButton from "./componentes/BotaoWhats";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +33,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="pt-28 flex-grow">{children}</main> {/* Corrigido flex-grow */}
+        <ScrollToTop />
+        <main className="mt-20 flex-grow">{children}</main>
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

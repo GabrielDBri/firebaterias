@@ -4,27 +4,27 @@ import Beneficios from './comp2/beneficios';
 const ListaBeneficios = () => {
   const beneficios = [
     {
-      imagem: '/images/qualidade.jpg',
+      imagem: '/images/beneficios/garantia-da-qualidade.png',
       titulo: 'Qualidade Garantida',
       descricao: 'Baterias com alto desempenho e durabilidade.',
     },
     {
-      imagem: '/images/garantia.jpg',
+      imagem: '/images/beneficios/periodo-de-garantia.png',
       titulo: 'Garantia Estendida',
       descricao: 'Cobertura completa em caso de defeitos de fabricação.',
     },
     {
-      imagem: '/images/eficiencia.jpg',
+      imagem: '/images/beneficios/alta-velocidade.png',
       titulo: 'Alta Eficiência',
       descricao: 'Tecnologia avançada para uma energia duradoura.',
     },
     {
-      imagem: '/images/atendimento.jpg',
+      imagem: '/images/beneficios/atendimento-ao-cliente.png',
       titulo: 'Atendimento Especializado',
       descricao: 'Equipe pronta para atender e orientar.',
     },
     {
-      imagem: '/images/variedade.jpg',
+      imagem: '/images/beneficios/novo-produto.png',
       titulo: 'Variedade de Produtos',
       descricao: 'Ampla gama de baterias para diversas necessidades.',
     },
