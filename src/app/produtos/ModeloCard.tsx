@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ModeloCardProps {
   modelo: {
@@ -35,15 +36,18 @@ const ModeloCard = ({ modelo, isSelected, onSelect }: ModeloCardProps) => {
           transform: isSelected ? 'translateY(-10px)' : 'none',
         }}
       >
-        <img
+        <Image
           src={modelo.imagem}
           alt={modelo.titulo}
+          width={180} // Defina a largura adequada aqui
+          height={100} // Defina a altura adequada aqui
           className="w-full h-24 object-contain mb-4"
           style={{
             transition: 'transform 0.3s ease',
             transform: isSelected ? 'scale(1.1)' : 'scale(1)',
           }}
         />
+
         <h3
           className={`text-lg font-bold text-center ${
             isSelected ? "text-white" : "text-gray-800"

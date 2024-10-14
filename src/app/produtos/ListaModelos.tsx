@@ -9,6 +9,15 @@ interface Modelo {
   imagem: string;
 }
 
+interface Bateria {
+  tipo: string;
+  modelos: Modelo[];
+}
+
+interface ProdutosData {
+  baterias: Bateria[];
+}
+
 interface ListaModelosProps {
   tipoBateria: string;
 }
@@ -21,20 +30,13 @@ const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
     const fetchData = async () => {
       try {
         const response = await fetch("/produtos.json");
-        const data = await response.json();
+        const data: ProdutosData = await response.json();
 
-        const bateriaSelecionada = data.baterias.find((bateria: any) => bateria.tipo === tipoBateria);
+        const bateriaSelecionada = data.baterias.find((bateria) => bateria.tipo === tipoBateria);
 
         if (bateriaSelecionada) {
-          const modelos = bateriaSelecionada.modelos.map((modelo: any) => ({
-            id: modelo.id,
-            titulo: modelo.titulo,
-            descricao: modelo.descricao,
-            imagem: modelo.imagem
-          }));
-          
-          setModelosData(modelos);
-          setModeloSelecionado(modelos[0]); // Define o primeiro modelo como selecionado por padrão
+          setModelosData(bateriaSelecionada.modelos);
+          setModeloSelecionado(bateriaSelecionada.modelos[0]); // Define o primeiro modelo como selecionado por padrão
         } else {
           console.error("Tipo de bateria não encontrado:", tipoBateria);
         }

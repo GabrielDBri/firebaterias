@@ -16,6 +16,23 @@ interface Produto {
   modeloId: string;
 }
 
+interface Bateria {
+  tipo: string;
+  modelos: Modelo[];
+}
+
+interface Modelo {
+  id: string;
+  titulo: string;
+  descricao: string;
+  imagem: string;
+  produtos: Produto[];
+}
+
+interface ProdutosData {
+  baterias: Bateria[];
+}
+
 interface ListaDeProdutosProps {
   modeloSelecionado: string;
   tipoBateria: string;
@@ -33,15 +50,16 @@ const ListaDeProdutos = ({ modeloSelecionado, tipoBateria, descricaoModelo }: Li
           throw new Error(`Erro na resposta do servidor: ${response.statusText}`);
         }
 
-        const data = await response.json();
-        const bateriaSelecionada = data.baterias.find((bateria: any) => bateria.tipo === tipoBateria);
+        const data: ProdutosData = await response.json();
+        const bateriaSelecionada = data.baterias.find((bateria) => bateria.tipo === tipoBateria);
+
         if (!bateriaSelecionada) {
           console.error("Tipo de bateria não encontrado:", tipoBateria);
           setProdutos([]);
           return;
         }
 
-        const modelo = bateriaSelecionada.modelos.find((mod: any) => mod.id === modeloSelecionado);
+        const modelo = bateriaSelecionada.modelos.find((mod) => mod.id === modeloSelecionado);
         if (modelo && modelo.produtos) {
           setProdutos(modelo.produtos);
         } else {
