@@ -53,7 +53,7 @@ const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
   }
 
   return (
-    <div>
+    <div className="mb-8">
       <div className="flex gap-4 mt-8">
         {modelosData.map((modelo) => (
           <div key={modelo.id} className="flex flex-col items-center" style={{ marginLeft: '20px' }}>

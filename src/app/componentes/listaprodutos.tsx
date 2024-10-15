@@ -75,7 +75,7 @@ const ListaDeProdutos = ({ modeloSelecionado, tipoBateria, descricaoModelo }: Li
   }, [modeloSelecionado, tipoBateria]);
 
   return (
-    <section className="container mx-auto p-8 bg-gray-800 bg-opacity-40 rounded-lg">
+    <section className="container mx-auto p-8 bg-gray-800 bg-opacity-40 rounded-lg mt-8">
       {/* Exibe a descrição do modelo selecionado */}
       <h2 className="text-3xl font-bold text-center mb-8 text-white">{descricaoModelo}</h2>
       
