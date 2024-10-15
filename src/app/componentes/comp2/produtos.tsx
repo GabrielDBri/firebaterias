@@ -17,13 +17,13 @@ const ProdutoTabela = ({ produto }: { produto: Produto }) => {
   return (
     <div className="bg-gray-100 rounded-lg shadow-md relative">
       {/* Cabeçalho com código do produto e imagem */}
-      <div className="bg-gray-400 text-white flex items-center p-4 relative h-24">
+      <div className="bg-gray-600 text-white flex items-center p-4 relative h-24">
         <div className="absolute -top-8 left-4">
           <Image
             src={produto.imagem}
             alt={produto.codigo}
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             className="object-contain"
           />
         </div>

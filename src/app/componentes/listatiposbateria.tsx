@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'; // Atualizado para a versão atual do Next.js
 import Produto from './comp2/tiposbateria';
 
-const ListaProdutos = () => {
+const ListaTiposBateria = () => {
   const router = useRouter();
   const tipos = [
     {
@@ -59,4 +59,4 @@ const ListaProdutos = () => {
   );
 };
 
-export default ListaProdutos;
+export default ListaTiposBateria;

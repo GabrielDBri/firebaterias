@@ -10,7 +10,7 @@
           "id": "light-24",
           "titulo": "Light 24 Meses",
           "descricao": "Baterias para veículos leves com 24 meses de garantia",
-          "imagem": "/images/light-24.webp",
+          "imagem": "/fire.fw.png",
           "produtos": [
             {
               "codigo": "VL100",
@@ -52,7 +52,7 @@
           "id": "heavy-24",
           "titulo": "Heavy 24 Meses",
           "descricao": "Baterias robustas para veículos pesados com 24 meses de garantia",
-          "imagem": "/images/heavy-24.webp",
+          "imagem": "/fire-caminhao.png",
           "produtos": [
             {
               "codigo": "VP100",
@@ -136,11 +136,11 @@
           "id": "truforce-24",
           "titulo": "Truforce EFB 24 Meses",
           "descricao": "Baterias estacionárias com 24 meses de garantia",
-          "imagem": "/images/truforce-24.webp",
+          "imagem": "/fire-caminhao.png",
           "produtos": [
             {
               "codigo": "ES100",
-              "imagem": "/images/truforce-produto1.jpg",
+              "imagem": "/fire-caminhao.png",
               "dimensoes": "310 x 170 x 220",
               "capacidade_c100": "100 Ah",
               "capacidade_c20": "85 Ah",
@@ -170,11 +170,11 @@
           "id": "maxfor-18",
           "titulo": "Maxfor 18 Meses",
           "descricao": "Baterias estacionárias com 18 meses de garantia",
-          "imagem": "/images/maxfor-18.webp",
+          "imagem": "/fire.fw.png",
           "produtos": [
             {
               "codigo": "ES300",
-              "imagem": "/images/maxfor-produto1.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "360 x 200 x 240",
               "capacidade_c100": "150 Ah",
               "capacidade_c20": "130 Ah",
