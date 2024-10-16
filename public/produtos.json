@@ -14,7 +14,7 @@
           "produtos": [
             {
               "codigo": "VL100",
-              "imagem": "/images/light-produto1.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "200 x 170 x 160",
               "capacidade_c100": "35 Ah",
               "capacidade_c20": "29 Ah",
@@ -27,7 +27,7 @@
             },
             {
               "codigo": "VL200",
-              "imagem": "/images/light-produto2.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "210 x 180 x 170",
               "capacidade_c100": "45 Ah",
               "capacidade_c20": "38 Ah",
@@ -56,7 +56,7 @@
           "produtos": [
             {
               "codigo": "VP100",
-              "imagem": "/images/heavy-produto1.jpg",
+              "imagem": "/fire-caminhao.png",
               "dimensoes": "330 x 170 x 240",
               "capacidade_c100": "150 Ah",
               "capacidade_c20": "130 Ah",
@@ -69,7 +69,7 @@
             },
             {
               "codigo": "VP200",
-              "imagem": "/images/heavy-produto2.jpg",
+              "imagem": "/fire-caminhao.png",
               "dimensoes": "350 x 180 x 250",
               "capacidade_c100": "180 Ah",
               "capacidade_c20": "160 Ah",
@@ -94,11 +94,11 @@
           "id": "solar-24",
           "titulo": "Solar 24 Meses",
           "descricao": "Baterias para sistemas solares com 24 meses de garantia",
-          "imagem": "/images/solar-24.webp",
+          "imagem": "/fire-caminhao.png",
           "produtos": [
             {
               "codigo": "SL100",
-              "imagem": "/images/solar-produto1.jpg",
+              "imagem": "/fire-caminhao.png",
               "dimensoes": "250 x 170 x 220",
               "capacidade_c100": "100 Ah",
               "capacidade_c20": "85 Ah",
@@ -111,7 +111,7 @@
             },
             {
               "codigo": "SL200",
-              "imagem": "/images/solar-produto2.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "270 x 180 x 230",
               "capacidade_c100": "120 Ah",
               "capacidade_c20": "105 Ah",
@@ -153,7 +153,7 @@
             },
             {
               "codigo": "ES200",
-              "imagem": "/images/truforce-produto2.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "340 x 190 x 230",
               "capacidade_c100": "120 Ah",
               "capacidade_c20": "105 Ah",
@@ -199,11 +199,11 @@
           "id": "moto-12",
           "titulo": "Moto 12 Meses",
           "descricao": "Baterias para motocicletas com 12 meses de garantia",
-          "imagem": "/images/moto-12.webp",
+          "imagem": "/fire.fw.png",
           "produtos": [
             {
               "codigo": "MT100",
-              "imagem": "/images/moto-produto1.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "150 x 80 x 130",
               "capacidade_c100": "10 Ah",
               "capacidade_c20": "8 Ah",
@@ -216,7 +216,7 @@
             },
             {
               "codigo": "MT200",
-              "imagem": "/images/moto-produto2.jpg",
+              "imagem": "/fire.fw.png",
               "dimensoes": "160 x 90 x 140",
               "capacidade_c100": "12 Ah",
               "capacidade_c20": "10 Ah",
