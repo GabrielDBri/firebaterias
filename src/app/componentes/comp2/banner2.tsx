@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Banner2 = () => {
   return (
-    <section className="relative my-16 bg-black text-white flex flex-col items-center">
+    <section className="relative my-16 bg-black text-white flex flex-col md:flex-row items-center">
       {/* Coluna de Texto */}
-      <div className="w-full p-6 md:p-12 flex flex-col justify-center text-center md:text-left">
+      <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="text-red-600">FIRE,</span> A Potência Que Você Precisa, Onde Quer Que Vá.
         </h2>
@@ -20,13 +20,13 @@ const Banner2 = () => {
       </div>
       
       {/* Coluna da Imagem */}
-      <div className="w-full h-[300px] md:h-[500px] relative">
+      <div className="w-full md:w-1/2 h-[300px] md:h-[600px] relative">
         <Image
           src="/banner2.jpg" // Substitua pelo caminho correto da imagem
           alt="Imagem de um carro simbolizando potência e desempenho"
           layout="fill"
           objectFit="cover"
-          objectPosition="center" // Centraliza a imagem para visibilidade completa
+          objectPosition="bottom" // Posiciona a imagem para melhor visibilidade no desktop
           priority
         />
       </div>
