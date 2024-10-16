@@ -188,6 +188,48 @@
           ]
         }
       ]
+    },
+    {
+      "tipo": "motocicletas",
+      "titulo": "Motos",
+      "descricao": "Baterias para motocicletas",
+      "imagem": "/images/motos.webp",
+      "modelos": [
+        {
+          "id": "moto-12",
+          "titulo": "Moto 12 Meses",
+          "descricao": "Baterias para motocicletas com 12 meses de garantia",
+          "imagem": "/images/moto-12.webp",
+          "produtos": [
+            {
+              "codigo": "MT100",
+              "imagem": "/images/moto-produto1.jpg",
+              "dimensoes": "150 x 80 x 130",
+              "capacidade_c100": "10 Ah",
+              "capacidade_c20": "8 Ah",
+              "capacidade_c10": "6 Ah",
+              "garantia": "12 meses",
+              "terminal": "T",
+              "peso": "2 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "moto-12"
+            },
+            {
+              "codigo": "MT200",
+              "imagem": "/images/moto-produto2.jpg",
+              "dimensoes": "160 x 90 x 140",
+              "capacidade_c100": "12 Ah",
+              "capacidade_c20": "10 Ah",
+              "capacidade_c10": "8 Ah",
+              "garantia": "12 meses",
+              "terminal": "T",
+              "peso": "2.5 kg",
+              "manutencao": "Livre de Manutenção",
+              "modeloId": "moto-12"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

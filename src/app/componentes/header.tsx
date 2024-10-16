@@ -1,35 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
+import MainMenu from "./MainMenu";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-800 text-white  z-50 shadow-lg">
-      <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <div className="text-lg font-bold">
-          <Link href="/">
-              <Image
-                src="/logo1.png" // Caminho da imagem na pasta public
-                alt="Fire Baterias"
-                width={200} // Ajuste a largura conforme necessário
-                height={200} // Ajuste a altura conforme necessário
-                className="mr-2" // Classe opcional para espaçamento à direita
-              />
-          </Link>
-        </div>
-        <ul className="flex space-x-4">
-          <li>
-            <Link href="/">Baterias Fire</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/contato">Contato</Link>
-          </li>
-          <li>
-            <Link href="/produtos">Produtos</Link>
-          </li>
-        </ul>
+    <header className="fixed top-0 left-0 w-full bg-gray-800 text-white z-50 shadow-lg">
+      <nav className="flex justify-between items-center max-w-7xl mx-auto p-4" aria-label="Main navigation">
+        <Link href="/" aria-label="Home">
+          <Image
+            src="/logo1.png"
+            alt="Fire Baterias"
+            width={150}
+            height={150}
+            priority // Para SEO, carregamento prioritário
+          />
+        </Link>
+        <MainMenu />
+        <MobileMenu />
       </nav>
     </header>
   );

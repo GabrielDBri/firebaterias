@@ -30,7 +30,7 @@ const Banner = () => {
               className="w-full h-auto"
             />
             <div className="absolute bottom-0 left-0 right-0 w-full p-4 text-left text-white z-10 bg-black bg-opacity-60">
-              <h1 className="text-4xl font-bold">Baterias Fire, a energia que queima!</h1>
+              <h1 className="text-4xl font-bold">Baterias Fire, A Energia Que Você Precisa!</h1>
               <p className="mt-2">Venha conferir nossos tipos de produtos para diferentes aplicações.</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Banner = () => {
               className="w-full h-auto"
             />
             <div className="absolute bottom-0 left-0 right-0 w-full p-4 text-left text-white z-10 bg-black bg-opacity-60">
-              <h1 className="text-4xl font-bold">Baterias Fire, a energia que queima!</h1>
+              <h1 className="text-4xl font-bold">Baterias Fire, A Energia Que Você Precisa!</h1>
               <p className="mt-2">Venha conferir nossos tipos de produtos para diferentes aplicações.</p>
             </div>
           </div>
