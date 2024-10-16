@@ -1,14 +1,16 @@
+// components/comp2/beneficios.tsx
+
 interface BeneficioProps {
   lista: { imagem: string; titulo: string; descricao: string }[];
 }
 
 const Beneficios = ({ lista }: BeneficioProps) => {
   return (
-    <div className="flex justify-center flex-wrap gap-4">
+    <div className="flex flex-wrap justify-center gap-4">
       {lista.map((beneficio, index) => (
         <div
           key={index}
-          className="relative w-40 h-52 bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center text-center m-4 hover:scale-105 transform transition-all"
+          className="relative w-60 h-40 sm:w-1/2 md:w-40 md:h-52 lg:w-40 lg:h-52 bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center text-center m-4 hover:scale-105 transform transition-all"
           style={{
             backgroundImage: `url(${beneficio.imagem})`,
             backgroundSize: 'cover',

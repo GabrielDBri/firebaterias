@@ -33,7 +33,9 @@ const ListaBeneficios = () => {
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold text-center mb-8">Nossos Benefícios</h2>
-      <Beneficios lista={beneficios} />
+      <div className="flex flex-wrap justify-center gap-4">
+        <Beneficios lista={beneficios} />
+      </div>
     </section>
   );
 };

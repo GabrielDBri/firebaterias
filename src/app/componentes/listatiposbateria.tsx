@@ -12,6 +12,12 @@ const ListaTiposBateria = () => {
       tipo: 'veiculos-leves',
     },
     {
+      imagem: '/images/motos.webp', // Defina o caminho correto da imagem para "Motos"
+      titulo: 'Motos',
+      descricao: 'Baterias para motocicletas',
+      tipo: 'motos', // Adicione um identificador único para o redirecionamento
+    },
+    {
       imagem: '/images/caminhoes.webp',
       titulo: 'Veículos pesados',
       descricao: 'Baterias para veículos pesados',
@@ -29,6 +35,7 @@ const ListaTiposBateria = () => {
       descricao: 'Baterias estacionárias para backup',
       tipo: 'estacionarias',
     },
+    
   ];
 
   // Função de clique para redirecionamento

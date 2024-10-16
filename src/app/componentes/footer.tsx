@@ -1,69 +1,70 @@
 import Link from 'next/link';
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa6";
 import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gray-800 text-white py-6">
+      {/* Logo */}
       <div className="flex justify-center py-2">
         <Image 
           src="/logo1.png" // substitua pelo caminho correto da sua logo
           alt="Logo Baterias FIRE"
-          width={200} 
-          height={100} 
+          width={150} 
+          height={75} 
+          className="object-contain"
         />
       </div>  
-      <div className="bg-gray-800 py-2 border-b border-white pb-2"></div>
-      
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 pt-4">
+
+      <div className="bg-gray-800 py-2 border-b border-white"></div>
+
+      {/* Content */}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 px-4 text-center sm:text-left">
+        
         {/* Institucional */}
-        <div className="lg:border-white lg:pr-4">
+        <div className="pr-4">
           <h3 className="font-bold mb-4 border-b border-white pb-2">INSTITUCIONAL</h3>
           <ul className="space-y-2">
             <li><Link href="/" className="hover:underline">Home</Link></li>
-            <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
+            <li><Link href="/produtos" className="hover:underline">Produtos</Link></li>
             <li><Link href="/blog" className="hover:underline">Blog</Link></li>
             <li><Link href="/contato" className="hover:underline">Contato</Link></li>
-            <li><Link href="/politica-de-compra" className="hover:underline">Política de Compra</Link></li>
-            <li><Link href="/politica-de-frete" className="hover:underline">Política de Frete</Link></li>
           </ul>
         </div>
     
         {/* Produtos */}
-        <div className=" lg:border-white lg:pr-4">
+        <div className="pr-4">
           <h3 className="font-bold mb-4 border-b border-white pb-2">PRODUTOS</h3>
           <ul className="space-y-2">
-            <li><Link href="/produtos/balcao" className="hover:underline">Balcão</Link></li>
-            <li><Link href="/produtos/veiculos-eletricos" className="hover:underline">Baterias para Veículos Elétricos</Link></li>
-            <li><Link href="/produtos/acessorios" className="hover:underline">Acessórios para Baterias</Link></li>
-            <li><Link href="/produtos/agm" className="hover:underline">Bateria AGM</Link></li>
-            <li><Link href="/produtos/efb" className="hover:underline">Bateria EFB</Link></li>
-            <li><Link href="/produtos/ions-litio" className="hover:underline">Bateria de Íons de Lítio</Link></li>
+            <li><Link href="/produtos/veiculos-leves" className="hover:underline">Veículos Leves</Link></li>
+            <li><Link href="/produtos/veiculos-pesados" className="hover:underline">Veículos Pesados</Link></li>
+            <li><Link href="/produtos/motos" className="hover:underline">Motos</Link></li>
+            <li><Link href="/produtos/solares" className="hover:underline">Sistemas Solares</Link></li>
+            <li><Link href="/produtos/estacionarias" className="hover:underline">Estacionários</Link></li>
           </ul>
         </div>
 
         {/* Contato */}
-        <div className="lg:col-span-2">
-          <div>
+        <div className="lg:col-span-2 text-center sm:text-left">
+          <div className="mb-4">
             <h3 className="font-bold mb-4 border-b border-white pb-2">CONTATO</h3>
-            <div className="flex space-x-4 py-4">
-              <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp className="text-4xl" />
+            <div className="flex flex-wrap justify-center sm:justify-start gap-4 py-4">
+              <a href="https://wa.me/+5535999640477" target="_blank" rel="noopener noreferrer" className="text-3xl">
+                <FaWhatsapp />
               </a>
-              <a href="tel:+5535999640477" rel="noopener noreferrer">
-                <BsFillTelephoneFill className="text-4xl"/>
+              <a href="tel:+5535999640477" rel="noopener noreferrer" className="text-3xl">
+                <BsFillTelephoneFill />
               </a>
-              <a href="mailto:contato@bateriasfire.com" rel="noopener noreferrer">
-                <MdOutlineEmail className="text-4xl" />
+              <a href="mailto:contato@bateriasfire.com" rel="noopener noreferrer" className="text-3xl">
+                <MdOutlineEmail />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-4xl" />
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-3xl">
+                <FaInstagram />
               </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF className="text-4xl" />
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-3xl">
+                <FaFacebookF />
               </a>
             </div>
           </div>
@@ -71,34 +72,29 @@ export default function Footer() {
           {/* Lojas Físicas */}
           <div>
             <h3 className="font-bold mb-4 border-b border-white pb-2">LOJAS FÍSICAS</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div>
-                <strong>PORTO FERREIRA - SP</strong>
-                <p>Av. Henrique da Motta Fonseca Jr, 1744</p>
-                <p>(19) 3581-4077</p>
-                <p>(19) 99336-1557</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="text-sm">
+                <strong>ITAJUBA - MG</strong>
+                <p>Av. Paulo Chiaradia, 316</p>
+                <p>Bairro São Vicente</p>
+                <p>(35) 3622-0282</p>
+                <p>(35) 98812-4312</p>
               </div>
-              <div>
-                <strong>RIBEIRÃO PRETO - SP</strong>
-                <p>Av. Wladimir Meireles Ferreira, 1795</p>
-                <p>(16) 3512-8236</p>
-                <p>(16) 99152-6536</p>
-              </div>
-              <div>
-                <strong>SÃO CARLOS - SP</strong>
-                <p>Rua Major Julio Salles, 450</p>
-                <p>(16) 3374-3030</p>
-                <p>(16) 99716-9753</p>
+              <div className="text-sm">
+                <strong>POUSO ALEGRE - SP</strong>
+                <p>Av. Vereador Antônio da Costa Rios, 1172</p>
+                <p>Bairro São Geraldo</p>
+                <p>(35) 3422-0728</p>
+                <p>(35)  98805-2223</p>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <div className="bg-black-200 py-4 border-t border-white w-full">
-        <div className="container mx-auto text-center text-sm">
-          &copy; 2024 Todos os direitos reservados & Baterias FIRE
-        </div>
+      {/* Footer Bottom */}
+      <div className="bg-black-200 py-4 border-t border-white w-full text-center text-xs">
+        &copy; 2024 Todos os direitos reservados & Baterias FIRE
       </div>
     </footer>
   );
