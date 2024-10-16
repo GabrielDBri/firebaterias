@@ -54,9 +54,9 @@ const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
 
   return (
     <div className="mb-8">
-      <div className="flex gap-4 mt-8">
+      <div className="flex gap-4 mt-8 overflow-x-auto whitespace-nowrap pr-5">
         {modelosData.map((modelo) => (
-          <div key={modelo.id} className="flex flex-col items-center" style={{ marginLeft: '20px' }}>
+          <div key={modelo.id} className="flex-shrink-0 flex flex-col items-center min-w-[200px] ml-5">
             <ModeloCard
               modelo={modelo}
               isSelected={modeloSelecionado.id === modelo.id}
