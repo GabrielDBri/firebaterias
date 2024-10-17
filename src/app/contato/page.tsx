@@ -1,5 +1,5 @@
-import Contact from '../componentes/contact';
-import Banner from '../componentes/comp2/banner';
+import Contact from '../componentes/Contact';
+import Banner from '../componentes/banners/Banner';
 
 
 

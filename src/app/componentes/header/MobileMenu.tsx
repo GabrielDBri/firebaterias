@@ -12,8 +12,8 @@ const menuItems = [
     { label: "VEÍCULOS LEVES", path: "/produtos/veiculos-leves" },
     { label: "VEÍCULOS PESADOS", path: "/produtos/veiculos-pesados" },
     { label: "MOTOS", path: "/produtos/motos" },
-    { label: "SOLAR", path: "/produtos/solar" },
-    { label: "ESTACIONÁRIA", path: "/produtos/estacionaria" }
+    { label: "SOLAR", path: "/produtos/solares" },
+    { label: "ESTACIONÁRIA", path: "/produtos/estacionarias" }
   ]},
   { label: "ENCONTRE SUA BATERIA", path: "/encontre-sua-bateria" },
   { label: "BLOG", path: "/blog" }

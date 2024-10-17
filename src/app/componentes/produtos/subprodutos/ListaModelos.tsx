@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ListaDeProdutos from "../componentes/listaprodutos";
+import ListaDeProdutos from "./Listaprodutos";
 import ModeloCard from "./ModeloCard";
 
 interface Modelo {

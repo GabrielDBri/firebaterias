@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from 'next/navigation'; // Atualizado para a versão atual do Next.js
-import Produto from './comp2/tiposbateria';
+import Produto from './subprodutos/Tiposbateria';
 
 const ListaTiposBateria = () => {
   const router = useRouter();

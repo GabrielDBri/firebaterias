@@ -1,7 +1,7 @@
-import Banner from '../componentes/comp2/banner';
-import ListaBeneficios from '../componentes/listabeneficios';
-import Banner2 from '../componentes/comp2/banner2';
-import ListaTiposBateria from '../componentes/listatiposbateria';
+import Banner from '../componentes/banners/Banner';
+import ListaBeneficios from '../componentes/produtos/Listabeneficios';
+import Banner2 from '../componentes/banners/Banner2';
+import ListaTiposBateria from '../componentes/produtos/Listatiposbateria';
 
 const Home = () => {
   return (
