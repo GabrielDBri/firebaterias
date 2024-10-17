@@ -1,6 +1,6 @@
 "use client";
-import Banner from "../banner";
-import ListaModelos from "../ListaModelos";
+import Banner from "../../componentes/banners/Banner3";
+import ListaModelos from "../../componentes/produtos/subprodutos/ListaModelos";
 
 const Solar = () => {
   return (

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProdutoTabela from "./comp2/produtos";
+import ProdutoTabela from "./Produtos";
 
 interface Produto {
   codigo: string;

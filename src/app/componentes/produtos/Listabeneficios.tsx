@@ -1,5 +1,5 @@
 // components/ListaBeneficios.tsx
-import Beneficios from './comp2/beneficios';
+import Beneficios from './Beneficios';
 
 const ListaBeneficios = () => {
   const beneficios = [
