@@ -1,4 +1,4 @@
-import Contact from '../componentes/Contact';
+import Contact from '../componentes/Contato';
 import Banner from '../componentes/banners/Banner';
 
 export default function ProdutosPage() {
