@@ -3,7 +3,7 @@ import Banner from '../componentes/banners/Banner';
 
 export default function ProdutosPage() {
   return (
-    <section className="flex flex-col items-center text-center py-12">
+    <section className="flex flex-col items-center text-center">
       <div className="w-full">
         <Banner />
       </div>

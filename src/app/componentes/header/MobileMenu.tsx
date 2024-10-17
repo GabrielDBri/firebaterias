@@ -15,6 +15,7 @@ const menuItems = [
     { label: "SOLAR", path: "/produtos/solares" },
     { label: "ESTACIONÁRIA", path: "/produtos/estacionarias" }
   ]},
+  { label: "ENTRAR EM CONTATO", path: "/contato" },
   { label: "ENCONTRE SUA BATERIA", path: "/encontre-sua-bateria" },
   { label: "BLOG", path: "/blog" }
 ];
