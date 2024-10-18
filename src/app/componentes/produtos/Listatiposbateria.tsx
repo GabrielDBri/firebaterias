@@ -1,46 +1,55 @@
 "use client";
-import { useRouter } from 'next/navigation'; // Atualizado para a versão atual do Next.js
-import Produto from './subprodutos/Tiposbateria';
+import { useRef } from 'react';
+import { useRouter } from 'next/navigation'; // Usando o useRouter para navegação
+import Produto from './Tiposbateria';
+import Navegacao from './Navegacao';
+
+const produtos = [
+  {
+    imagem: '/images/veiculosleve.webp',
+    titulo: 'Veículos leves',
+    tipo: 'veiculos-leves',
+  },
+  {
+    imagem: '/images/motos.webp',
+    titulo: 'Motos',
+    tipo: 'motos',
+  },
+  {
+    imagem: '/images/caminhoes.webp',
+    titulo: 'Veículos pesados',
+    tipo: 'veiculos-pesados',
+  },
+  {
+    imagem: '/images/solar.webp',
+    titulo: 'Solares',
+    tipo: 'solares',
+  },
+  {
+    imagem: '/images/estacionarios.webp',
+    titulo: 'Estacionárias',
+    tipo: 'estacionarias',
+  },
+];
 
 const ListaTiposBateria = () => {
-  const router = useRouter();
-  const tipos = [
-    {
-      imagem: '/images/veiculosleve.webp',
-      titulo: 'Veículos leves',
-      descricao: 'Baterias para veículos leves',
-      tipo: 'veiculos-leves',
-    },
-    {
-      imagem: '/images/motos.webp', // Defina o caminho correto da imagem para "Motos"
-      titulo: 'Motos',
-      descricao: 'Baterias para motocicletas',
-      tipo: 'motos', // Adicione um identificador único para o redirecionamento
-    },
-    {
-      imagem: '/images/caminhoes.webp',
-      titulo: 'Veículos pesados',
-      descricao: 'Baterias para veículos pesados',
-      tipo: 'veiculos-pesados',
-    },
-    {
-      imagem: '/images/solar.webp',
-      titulo: 'Solares',
-      descricao: 'Baterias para sistemas solares',
-      tipo: 'solares',
-    },
-    {
-      imagem: '/images/estacionarios.webp',
-      titulo: 'Estacionárias',
-      descricao: 'Baterias estacionárias para backup',
-      tipo: 'estacionarias',
-    },
-    
-  ];
+  const containerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter(); // Inicializando o useRouter
 
-  // Função de clique para redirecionamento
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
   const handleClick = (tipo: string) => {
-    router.push(`/produtos/${tipo}`);
+    router.push(`/produtos/${tipo}`); // Navega para a rota correta
   };
 
   return (
@@ -51,17 +60,26 @@ const ListaTiposBateria = () => {
           Venha conferir nossos tipos de produtos para diferentes aplicações.
         </p>
       </div>
-      <div className="flex items-center justify-center flex-wrap gap-6">
-        {tipos.map((tipo, index) => (
+
+      {/* Contêiner dos produtos com rolagem horizontal */}
+      <div
+        ref={containerRef}
+        className="flex gap-6 overflow-x-auto scrollbar-hide snap-x"
+        style={{ scrollSnapType: 'x mandatory' }}
+      >
+        {produtos.map((produto, index) => (
           <div
             key={index}
-            onClick={() => handleClick(tipo.tipo)}
-            className="cursor-pointer hover:scale-105 transition-transform"
+            onClick={() => handleClick(produto.tipo)} // Redireciona ao clicar no produto
+            className="cursor-pointer" // Garantindo que o mouse indique a interatividade
           >
-            <Produto {...tipo} />
+            <Produto imagem={produto.imagem} titulo={produto.titulo} />
           </div>
         ))}
       </div>
+
+      {/* Botões de navegação */}
+      <Navegacao scrollLeft={scrollLeft} scrollRight={scrollRight} />
     </section>
   );
 };

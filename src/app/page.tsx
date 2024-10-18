@@ -5,6 +5,7 @@ import SobreNos from './componentes/Home/SobreNos';
 import Manifesto from './componentes/Home/Manifesto';       
 import ListaServicos from './componentes/Home/ListaServicos';
 import InfoGrid from './componentes/InfoGrid';
+import Sustainability from './componentes/Home/Sustainability';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <SobreNos />
       <ListaServicos />
       <Manifesto />  
+      <Sustainability/>
       <InfoGrid/>
     </div>
   );
