@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./componentes/Header/Headerr";
+import Header from "./componentes/Header/Header";
 import Footer from "./componentes/Footer/Footer";
 import ScrollToTop from "./componentes/ScrollToTop";
 import WhatsAppButton from "./componentes/BotaoWhats";
