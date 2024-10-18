@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <div className="relative text-center h-[600px]">
+    <div className="relative text-center">
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={0}
@@ -21,7 +21,7 @@ const Banner = () => {
       >
         {/* Primeiro Slide */}
         <SwiperSlide>
-          <div className="relative h-[600px]">
+          <div className="h-[600px]">
             <Image
               src="/banner1.jpeg"
               alt="Banner de Fire Baterias 1"

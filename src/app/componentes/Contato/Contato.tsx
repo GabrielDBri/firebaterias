@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Alert from '../Contato/Alert';
 
 type FormData = {
   firstName: string;
@@ -20,6 +21,7 @@ export default function Contact() {
     qualification: '',
     message: '',
   });
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -29,17 +31,30 @@ export default function Contact() {
     }));
   };
 
+  const validateForm = () => {
+    const { firstName, lastName, email, contato, qualification, message } = formData;
+    if (!firstName || !lastName || !email || !contato || !qualification || !message) {
+      setShowAlert(true);
+      return false;
+    }
+    return true;
+  };
+
   const handleEnviar = () => {
-    const numeroTelefone = '5535999248521'; // Seu número de telefone com o código do país
+    if (!validateForm()) return;
+    
+    const numeroTelefone = '5535999248521';
     const mensagem = `Nome: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0AContato: ${formData.contato}%0AQualificação: ${formData.qualification}%0AMensagem: ${formData.message}`;
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${mensagem}`;
     window.open(urlWhatsApp, '_blank');
   };
 
   return (
+    
     <div className="container mx-auto my-16 p-6 bg-black-500 shadow-md rounded-lg text-white">
+      <Alert show={showAlert} onClose={() => setShowAlert(false)} />
       <div className="flex flex-col md:flex-row">
-        <div className="bg-red-600 text-white p-8 md:w-1/3">
+        <div className="bg-[#8C0000] text-white p-8 md:w-1/3">
           <h1 className="text-2xl font-bold mb-4">Vamos conversar!</h1>
           <p className="mb-4">Se precisar de ajuda, estamos aqui para você!</p>
           <ul className="space-y-4">
@@ -55,8 +70,8 @@ export default function Contact() {
               <input
                 type="text"
                 name="firstName"
-                placeholder="Primeiro Nome"
-                className="bg-gray-700 text-white border border-gray-500 rounded-md p-3 w-full mb-4 md:mb-0"
+                placeholder="Nome"
+                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
                 value={formData.firstName}
                 onChange={handleChange}
                 aria-label="Primeiro Nome"
@@ -64,8 +79,8 @@ export default function Contact() {
               <input
                 type="text"
                 name="lastName"
-                placeholder="Último Nome"
-                className="bg-gray-700 text-white border border-gray-500 rounded-md p-3 w-full"
+                placeholder="Sobrenome"
+                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
                 value={formData.lastName}
                 onChange={handleChange}
                 aria-label="Último Nome"
@@ -76,7 +91,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="bg-gray-700 text-white border border-gray-500 rounded-md p-3 w-full mb-4 md:mb-0"
+                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
                 value={formData.email}
                 onChange={handleChange}
                 aria-label="Email"
@@ -85,7 +100,7 @@ export default function Contact() {
                 type="text"
                 name="contato"
                 placeholder="Contato"
-                className="bg-gray-700 text-white border border-gray-500 rounded-md p-3 w-full"
+                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
                 value={formData.contato}
                 onChange={handleChange}
                 aria-label="Contato"
@@ -100,7 +115,7 @@ export default function Contact() {
                       type="radio"
                       name="qualification"
                       value={option}
-                      className="form-radio bg-gray-700 text-white"
+                      className="form-radio focus:ring-red-600 accent-[#8C0000]"
                       checked={formData.qualification === option}
                       onChange={handleChange}
                     />
@@ -112,7 +127,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Sua mensagem"
-              className="bg-gray-700 text-white border border-gray-500 rounded-md p-3 w-full h-32"
+              className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
               value={formData.message}
               onChange={handleChange}
               aria-label="Mensagem"

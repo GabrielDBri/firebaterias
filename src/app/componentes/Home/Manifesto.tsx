@@ -1,21 +1,52 @@
 import Image from 'next/image';
+import React from 'react';
 
-const Manifesto = () => {
-  return (
-    <section className="py-12 bg-red-600 text-white text-center">
-      <h2 className="text-2xl font-bold mb-4">Our Manifesto</h2>
-      <div className="max-w-3xl mx-auto">
-        <Image 
-          src="/images/car.jpg" 
-          alt="Car Image" 
-          width={600} 
-          height={400} 
-          layout="responsive" 
-          className="rounded-md" 
-        />
-      </div>
+const Manifesto = () => (
+  <div className="relative">
+    <section className="p-6 bg-red-600 text-white relative" style={{ height: '150px' }}>
+      <header className="relative z-10">
+        <h1 className="text-3xl font-bold text-center mb-8">Nosso Manifesto</h1>
+      </header>
     </section>
-  );
-};
+
+    <section className="relative flex flex-col md:flex-row">
+      <article className="bg-black text-white p-8 shadow-md relative z-20 w-full md:w-2/5 -mt-8">
+        <h2 className="text-3xl font-bold mb-8">Nossa Identidade</h2>
+        <div className="space-y-6">
+          <div className="flex items-start">
+            <h3 className="text-4xl font-bold mr-4">01</h3>
+            <div>
+              <h4 className="text-xl font-bold">Nossa Missão</h4>
+              <p>Fornecer soluções energéticas inovadoras com foco em sustentabilidade.</p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <h3 className="text-4xl font-bold mr-4">02</h3>
+            <div>
+              <h4 className="text-xl font-bold">Visão</h4>
+              <p>Ser líder no mercado de baterias, com produtos de excelência e responsabilidade.</p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <h3 className="text-4xl font-bold mr-4">03</h3>
+            <div>
+              <h4 className="text-xl font-bold">Valores</h4>
+              <p>Inovação contínua, sustentabilidade ambiental, qualidade superior, ética transparente e responsabilidade social.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <figure className="relative w-full h-[300px] md:flex-1 mt-6 md:mt-0">
+        <Image
+          src="/images/motos.webp"
+          alt="Carro com Bateria FIRE"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full"
+        />
+      </figure>
+    </section>
+  </div>
+);
 
 export default Manifesto;
