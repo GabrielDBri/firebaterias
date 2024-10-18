@@ -15,7 +15,7 @@ interface Produto {
 
 const ProdutoTabela = ({ produto }: { produto: Produto }) => {
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md relative">
+    <div className="bg-gray-100 rounded-lg shadow-md relative w-full md:w-80 h-auto mx-auto min-w-[300px]"> {/* Largura mínima para mobile */}
       {/* Cabeçalho com código do produto e imagem */}
       <div className="bg-gray-600 text-white flex items-center p-4 relative h-24">
         <div className="absolute -top-8 left-4">

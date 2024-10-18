@@ -36,7 +36,7 @@ const Manifesto = () => (
           </div>
         </div>
       </article>
-      <figure className="relative w-full h-[300px] md:flex-1 mt-6 md:mt-0">
+      <figure className="relative h-[300px] md:flex-1">
         <Image
           src="/images/motos.webp"
           alt="Carro com Bateria FIRE"

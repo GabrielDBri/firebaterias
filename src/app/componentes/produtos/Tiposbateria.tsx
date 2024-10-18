@@ -5,15 +5,15 @@ interface ProdutoProps {
   titulo: string;
 }
 
-const Produto = ({ imagem, titulo }: ProdutoProps) => {
+const Tiposbateria = ({ imagem, titulo }: ProdutoProps) => {
   return (
     <div className="relative w-60 h-80 m-4 shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition-all">
       {/* Imagem ocupando todo o espaço */}
       <Image
         src={imagem}
         alt={titulo}
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
         quality={75}
         loading="lazy"
       />
@@ -25,4 +25,4 @@ const Produto = ({ imagem, titulo }: ProdutoProps) => {
   );
 };
 
-export default Produto;
+export default Tiposbateria;

@@ -81,7 +81,7 @@ export default function Footer() {
                 <p>(35) 98812-4312</p>
               </div>
               <div className="text-sm">
-                <strong>POUSO ALEGRE - SP</strong>
+                <strong>POUSO ALEGRE - MG</strong>
                 <p>Av. Vereador Antônio da Costa Rios, 1172</p>
                 <p>Bairro São Geraldo</p>
                 <p>(35) 3422-0728</p>
