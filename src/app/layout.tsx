@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./componentes/header/Header";
-import Footer from "./componentes/footer/Footer";
+import Header from "./componentes/Header/Header";
+import Footer from "./componentes/Footer/Footer";
 import ScrollToTop from "./componentes/ScrollToTop";
 import WhatsAppButton from "./componentes/BotaoWhats";
 
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Header />
         <ScrollToTop />
-        <main className="mt-20 flex-grow">{children}</main>
+        <main className=" flex-grow">{children}</main>
         <WhatsAppButton />
         <Footer />
       </body>

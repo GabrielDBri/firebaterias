@@ -5,7 +5,7 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-800 text-white z-50 shadow-lg">
+    <header className="top-0 left-0 w-full bg-gray-800 text-white shadow-lg">
       <nav className="flex justify-between items-center max-w-7xl mx-auto p-4" aria-label="Main navigation">
         <Link href="/" aria-label="Home">
           <Image

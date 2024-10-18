@@ -1,10 +1,10 @@
 // pages/index.tsx
 import { NextPage } from 'next';
-import Banner from './componentes/banners/Banner';
+import Banner from './componentes/Banners/Banner';
 import SobreNos from './componentes/Home/SobreNos';
-import Manifesto from './componentes/Home/Manifesto';
-import Identidade from './componentes/Home/Identidade';
+import Manifesto from './componentes/Home/Manifesto';       
 import ListaServicos from './componentes/Home/ListaServicos';
+import InfoGrid from './componentes/InfoGrid';
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <SobreNos />
       <ListaServicos />
       <Manifesto />  
-      <Identidade />
+      <InfoGrid/>
     </div>
   );
 };
