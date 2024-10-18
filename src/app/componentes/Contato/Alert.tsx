@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 interface AlertProps {
   show: boolean;
   onClose: () => void;
