@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { FiChevronRight } from "react-icons/fi";
-import SubMenu from "./SubMenu";
+import SubMenu from "../header/SubMenu";
 
 const menuItems = [
   { label: "BATERIAS FIRE", path: "/" },
