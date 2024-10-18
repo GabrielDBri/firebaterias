@@ -1,5 +1,5 @@
 "use client";
-import Banner from "../../componentes/Banners/Banner3";
+import Banner from "../../componentes/Banners/Banner3i";
 import ListaModelos from "../../componentes/produtos/subprodutos/ListaModelos";
 
 const Estacionarias = () => {

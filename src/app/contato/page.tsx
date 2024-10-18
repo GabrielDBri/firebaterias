@@ -1,5 +1,5 @@
 import Contact from '../componentes/Contato/Contato';
-import Banner from '../componentes/Banners/Banner';
+import Banner from '../componentes/Banners/Banner1';
 import InfoGrid from '../componentes/InfoGrid';
 
 export default function ProdutosPage() {
