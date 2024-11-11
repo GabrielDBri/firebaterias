@@ -5,15 +5,16 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   return (
-    <header className="top-0 left-0 w-full bg-gray-800 text-white shadow-lg">
-      <nav className="flex justify-between items-center max-w-7xl mx-auto p-4" aria-label="Main navigation">
+    <header className="top-0 left-0 w-full p-3 bg-gradient-to-r from-[#a30e06] to-[#ff0000] text-white shadow-lg">
+
+      <nav className="flex justify-between items-center max-w-8xl mx-auto" aria-label="Main navigation">
         <Link href="/" aria-label="Home">
           <Image
-            src="/logo1.png"
+            src="/images/logo1.svg"
             alt="Fire Baterias"
             width={150}
             height={150}
-            priority // Para SEO, carregamento prioritário
+            priority
           />
         </Link>
         <MainMenu />

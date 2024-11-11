@@ -42,7 +42,7 @@ export default function Contact() {
 
   const handleEnviar = () => {
     if (!validateForm()) return;
-    
+
     const numeroTelefone = '5535999248521';
     const mensagem = `Nome: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0AContato: ${formData.contato}%0AQualificação: ${formData.qualification}%0AMensagem: ${formData.message}`;
     const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${mensagem}`;
@@ -50,10 +50,9 @@ export default function Contact() {
   };
 
   return (
-    
-    <div className="container mx-auto my-16 p-6 bg-black-500 shadow-md rounded-lg text-white">
+    <div className="container mx-auto my-16 p-6 bg-white shadow-md rounded-lg text-white">
       <Alert show={showAlert} onClose={() => setShowAlert(false)} />
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row gap-8">
         <div className="bg-[#8C0000] text-white p-8 md:w-1/3">
           <h1 className="text-2xl font-bold mb-4">Vamos conversar!</h1>
           <p className="mb-4">Se precisar de ajuda, estamos aqui para você!</p>
@@ -63,7 +62,7 @@ export default function Contact() {
             <li><strong>Email:</strong> contact@firewebsite.com</li>
           </ul>
         </div>
-        <div className="md:w-2/3 p-8">
+        <div className="md:w-2/3 p-8 bg-white text-black">
           <h2 className="text-xl font-semibold mb-6">Entre em contato conosco</h2>
           <form className="space-y-6">
             <div className="flex flex-col md:flex-row md:space-x-4">
@@ -71,7 +70,7 @@ export default function Contact() {
                 type="text"
                 name="firstName"
                 placeholder="Nome"
-                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
+                className="bg-transparent text-black border-b-2 border-red-600 p-3 w-full font-sans focus:outline-none"
                 value={formData.firstName}
                 onChange={handleChange}
                 aria-label="Primeiro Nome"
@@ -80,7 +79,7 @@ export default function Contact() {
                 type="text"
                 name="lastName"
                 placeholder="Sobrenome"
-                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
+                className="bg-transparent text-black border-b-2 border-red-600 p-3 w-full font-sans focus:outline-none"
                 value={formData.lastName}
                 onChange={handleChange}
                 aria-label="Último Nome"
@@ -91,7 +90,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
+                className="bg-transparent text-black border-b-2 border-red-600 p-3 w-full font-sans focus:outline-none"
                 value={formData.email}
                 onChange={handleChange}
                 aria-label="Email"
@@ -100,7 +99,7 @@ export default function Contact() {
                 type="text"
                 name="contato"
                 placeholder="Contato"
-                className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
+                className="bg-transparent text-black border-b-2 border-red-600 p-3 w-full font-sans focus:outline-none"
                 value={formData.contato}
                 onChange={handleChange}
                 aria-label="Contato"
@@ -118,6 +117,7 @@ export default function Contact() {
                       className="form-radio focus:ring-red-600 accent-[#8C0000]"
                       checked={formData.qualification === option}
                       onChange={handleChange}
+                      aria-label={`Qualificação ${option}`}
                     />
                     <span>{option}</span>
                   </label>
@@ -127,7 +127,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Sua mensagem"
-              className="bg-transparent text-white border-b border-white p-3 w-full font-sans focus:outline-none focus:border-b-2 focus:border-red-600"
+              className="bg-transparent text-white border-b-2 border-red-600 p-3 w-full font-sans focus:outline-none"
               value={formData.message}
               onChange={handleChange}
               aria-label="Mensagem"

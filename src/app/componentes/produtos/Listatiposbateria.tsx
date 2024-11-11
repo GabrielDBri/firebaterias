@@ -53,10 +53,12 @@ const ListaTiposBateria = () => {
   };
 
   return (
-    <section className="py-12 relative">
-      <div className="mb-8 ml-4">
-        <h2 className="text-3xl font-bold text-left mb-2">Baterias Fire!</h2>
-        <p className="text-lg text-left text-gray-300">
+    <section className="py-16 md:py-28 relative" style={{ backgroundColor: '#f9f9f9' }}>
+      <div className="mb-4 md:mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-black uppercase">
+          BATERIAS <span className="text-red-500 font-bold">FIRE</span>
+        </h2>
+        <p className="text-base md:text-lg text-black">
           Venha conferir nossos tipos de produtos para diferentes aplicações.
         </p>
       </div>
@@ -64,14 +66,14 @@ const ListaTiposBateria = () => {
       {/* Contêiner dos produtos com rolagem horizontal */}
       <div
         ref={containerRef}
-        className="flex gap-6 overflow-x-auto scrollbar-hide snap-x"
+        className="flex gap-1 md:gap-3 overflow-x-scroll scrollbar-hide snap-x px-2"
         style={{ scrollSnapType: 'x mandatory' }}
       >
         {produtos.map((produto, index) => (
           <div
             key={index}
             onClick={() => handleClick(produto.tipo)} // Redireciona ao clicar no produto
-            className="cursor-pointer" // Garantindo que o mouse indique a interatividade
+            className="cursor-pointer snap-center min-w-[70%] sm:min-w-[30%] lg:min-w-[20%]" // Garantindo que o item se alinhe corretamente e tenha tamanho adequado
           >
             <Produto imagem={produto.imagem} titulo={produto.titulo} />
           </div>
@@ -79,7 +81,9 @@ const ListaTiposBateria = () => {
       </div>
 
       {/* Botões de navegação */}
-      <Navegacao scrollLeft={scrollLeft} scrollRight={scrollRight} />
+      <div className="flex justify-center mt-4">
+        <Navegacao scrollLeft={scrollLeft} scrollRight={scrollRight} />
+      </div>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import Banner from '../componentes/Banners/Banner1';
+import Banner from '../componentes/Banners/Banner_home/BannerH';
 import ListaBeneficios from '../componentes/produtos/Listabeneficios';
 import Banner2 from '../componentes/Banners/Banner2i';
 import ListaTiposBateria from '../componentes/produtos/Listatiposbateria';

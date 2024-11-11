@@ -3,14 +3,14 @@ import React from 'react';
 
 const Manifesto = () => (
   <div className="relative">
-    <section className="p-6 bg-red-600 text-white relative" style={{ height: '150px' }}>
-      <header className="relative z-10">
-        <h1 className="text-3xl font-bold text-center mb-8">Nosso Manifesto</h1>
+    <section className="p-6 bg-red-600 text-white relative flex justify-end items-center h-44 md:h-46 lg:h-48">
+      <header className="relative z-10 text-right">
+        <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold">Nosso Manifesto</h1>
       </header>
     </section>
 
     <section className="relative flex flex-col md:flex-row">
-      <article className="bg-black text-white p-8 shadow-md relative z-20 w-full md:w-2/5 -mt-8">
+      <article className="bg-black text-white p-8 md:p-16 shadow-md relative w-full md:w-2/5 -mt-8">
         <h2 className="text-3xl font-bold mb-8">Nossa Identidade</h2>
         <div className="space-y-6">
           <div className="flex items-start">
@@ -36,12 +36,13 @@ const Manifesto = () => (
           </div>
         </div>
       </article>
-      <figure className="relative h-[300px] md:flex-1">
+      <figure className="relative md:flex-1 h-[400px] md:h-auto overflow-hidden">
         <Image
           src="/images/motos.webp"
           alt="Carro com Bateria FIRE"
           layout="fill"
           objectFit="cover"
+          objectPosition="center"
           className="w-full h-full"
         />
       </figure>

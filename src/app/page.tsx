@@ -1,6 +1,6 @@
 // pages/index.tsx
 import { NextPage } from 'next';
-import Banner from './componentes/Banners/Banner1';
+import Banner from './componentes/Banners/Banner_home/BannerH';
 import SobreNos from './componentes/Home/SobreNos';
 import Manifesto from './componentes/Home/Manifesto';       
 import ListaServicos from './componentes/Home/ListaServicos';

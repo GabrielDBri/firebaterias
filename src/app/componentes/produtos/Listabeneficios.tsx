@@ -2,7 +2,6 @@
 
 import { useRef } from 'react';
 import Beneficios from './Beneficios';
-import Navegacao from './Navegacao'; // Importando o componente de navegação
 
 const ListaBeneficios = () => {
   const beneficios = [
@@ -35,35 +34,22 @@ const ListaBeneficios = () => {
 
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Funções de rolagem horizontal no mobile
-  const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="py-12 relative">
-      <h2 className="text-3xl font-bold text-center mb-8">Nossos Benefícios</h2>
+    <section className="py-16 sm:py-8 lg:py-24 relative" style={{ backgroundColor: '#dddddd' }}>
+      <h2 className="text-3xl font-bold text-black text-center mb-8 lg:mb-12">Nossos Benefícios</h2>
 
-
-      {/* Contêiner dos benefícios com rolagem horizontal no mobile e layout centralizado no desktop */}
+      {/* Contêiner dos benefícios com layout 3 em cima e 2 em baixo */}
       <div
         ref={containerRef}
-        className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory md:flex-wrap md:justify-center md:overflow-visible"
-        style={{ whiteSpace: 'nowrap' }} // Força o layout inline no mobile
+        className="grid gap-4 sm:gap-6 lg:gap-8 overflow-visible grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 justify-center"
       >
-        <Beneficios lista={beneficios} />
-      </div>
-      {/* Navegação visível apenas no mobile */}
-      <div className="md:hidden">
-        <Navegacao scrollLeft={scrollLeft} scrollRight={scrollRight} />
+        {beneficios.map((beneficio, index) => (
+          <div key={index} className="flex flex-col items-center p-4 sm:p-6 snap-center bg-white rounded-lg shadow-md">
+            <img src={beneficio.imagem} alt={beneficio.titulo} className="w-20 h-20 mb-2 lg:mb-4" />
+            <h3 className="text-xl font-semibold text-black mb-2 lg:mb-3">{beneficio.titulo}</h3>
+            <p className="text-center text-gray-700 text-sm lg:text-base">{beneficio.descricao}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

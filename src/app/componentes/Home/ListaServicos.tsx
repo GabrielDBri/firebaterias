@@ -4,8 +4,8 @@ import ServicoCard from './ServicoCard';
 
 const ListaServicos = () => {
   return (
-    <section className="py-12 bg-black-500">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-around space-y-6 md:space-y-0 md:space-x-6 px-6">
+    <section className="py-16 min-h-[90vh] text-black flex items-center justify-center" style={{ backgroundColor: '#dddddd' }}>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-around space-y-8 md:space-y-0 md:space-x-6 px-6">
         
         <Link href="/sobre-nos" aria-label="Sobre nós">
           <ServicoCard
