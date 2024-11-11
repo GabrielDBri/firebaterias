@@ -1,27 +1,31 @@
 interface BeneficioProps {
-  lista: { imagem: string; titulo: string; descricao: string }[];
+  lista: { imagem: string; titulo: string }[];
 }
 
 const Beneficios = ({ lista }: BeneficioProps) => {
   return (
-    <div className="flex gap-4 md:flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-screen-lg p-4">
       {lista.map((beneficio, index) => (
         <div
           key={index}
-          className="relative w-60 h-40 sm:w-1/2 md:w-40 md:h-52 lg:w-40 lg:h-52 bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center text-center m-4 hover:scale-105 transform transition-all"
-          style={{
-            backgroundImage: `url(${beneficio.imagem})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+          className="w-[250px] h-[320px] bg-gradient-to-b from-red-500 to-red-800 shadow-md rounded-lg p-4 text-left transform transition-all hover:scale-105 flex flex-col justify-between relative"
         >
-          {/* Overlay para melhorar a legibilidade */}
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-          
-          {/* Título e Descrição */}
-          <div className="relative px-4 py-2 text-white z-10">
-            <h3 className="text-lg font-bold">{beneficio.titulo}</h3>
-            <p className="text-sm mt-1">{beneficio.descricao}</p>
+          {/* Título do card no canto superior esquerdo, com maior tamanho de fonte e quebra de linhas */}
+          <h3 className="text-2xl font-bold text-white absolute top-8 left-4 break-words whitespace-pre-wrap">
+            {beneficio.titulo}
+          </h3>
+
+          {/* Espaço reservado para manter a imagem consistente */}
+          <div className="flex justify-center items-center mt-[100px] mb-4">
+            <img
+              src={beneficio.imagem}
+              alt={beneficio.titulo}
+              className="w-auto h-[150px] object-contain"
+              style={{
+                // Remover a sombra para eliminar o efeito de borda
+                boxShadow: 'none',
+              }}
+            />
           </div>
         </div>
       ))}

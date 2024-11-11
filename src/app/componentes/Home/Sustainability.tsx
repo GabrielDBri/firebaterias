@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sustainability = () => {
   return (
-    <section className="bg-white py-32 px-6 md:px-16 lg:px-32 text-black font-opensans" aria-labelledby="responsabilidade-ambiental">
+    <section className=" py-16 px-6 md:px-8 lg:px-16 text-black font-opensans" aria-labelledby="responsabilidade-ambiental"style={{ backgroundColor: '#f9f9f9' }}>
       <div className="max-w-screen-xl mx-auto">
         <header className="text-left mb-4">
           <p className="text-sm text-red-500 font-bold">LOGÍSTICA REVERSA</p>

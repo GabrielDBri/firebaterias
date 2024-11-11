@@ -9,7 +9,7 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { href: "/", label: <>Baterias <span className="text-red-700">Fire</span></> },
+  { href: "/", label: <>Baterias <span className="text-black">Fire</span></> },
   { href: "/blog", label: <>Blog</> },
   { href: "/contato", label: <>Contato</> },
   { href: "/produtos", label: <>Produtos</> },
@@ -24,8 +24,8 @@ export default function MainMenu() {
         <li
           key={href}
           role="menuitem"
-          className={`hover:border-b-4 hover:border-red-700 transition-all ${
-            pathname === href ? "border-b-4 border-red-700" : ""
+          className={`hover:border-b-4 hover:border-white transition-all ${
+            pathname === href ? "border-b-4 border-white" : ""
           }`}
         >
           <Link href={href} className="p-2 block">
