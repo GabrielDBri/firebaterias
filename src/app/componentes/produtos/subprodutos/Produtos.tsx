@@ -1,21 +1,9 @@
 import Image from "next/image";
-
-interface Produto {
-  codigo: string;
-  imagem: string;
-  dimensoes: string;
-  capacidade_c100: string;
-  capacidade_c20: string;
-  capacidade_c10: string;
-  garantia: string;
-  terminal: string;
-  peso: string;
-  manutencao: string;
-}
+import { Produto } from "./types"; // Importe a interface centralizada
 
 const ProdutoTabela = ({ produto }: { produto: Produto }) => {
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md relative w-full md:w-80 h-auto mx-auto min-w-[300px]"> {/* Largura mínima para mobile */}
+    <div className="bg-gray-100 rounded-lg shadow-md relative w-full md:w-80 h-auto mx-auto min-w-[300px]">
       {/* Cabeçalho com código do produto e imagem */}
       <div className="bg-gray-600 text-white flex items-center p-4 relative h-24">
         <div className="absolute -top-8 left-4">
@@ -33,6 +21,7 @@ const ProdutoTabela = ({ produto }: { produto: Produto }) => {
       {/* Tabela de especificações */}
       <table className="w-full text-center border-collapse border border-black mt-4">
         <tbody>
+          {/* Exibe os detalhes do produto */}
           <tr className="border border-black">
             <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">DIMENSÕES</td>
             <td className="p-2 border-black text-black">{produto.dimensoes}</td>

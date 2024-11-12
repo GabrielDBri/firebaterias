@@ -1,22 +1,7 @@
 import { useState, useEffect } from "react";
 import ListaDeProdutos from "./Listaprodutos";
 import ModeloCard from "./ModeloCard";
-
-interface Modelo {
-  id: string;
-  titulo: string;
-  descricao: string;
-  imagem: string;
-}
-
-interface Bateria {
-  tipo: string;
-  modelos: Modelo[];
-}
-
-interface ProdutosData {
-  baterias: Bateria[];
-}
+import { Modelo, ProdutosData } from "./types";  // Importando os tipos de types.ts
 
 interface ListaModelosProps {
   tipoBateria: string;
@@ -70,6 +55,7 @@ const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
         modeloSelecionado={modeloSelecionado.id}
         tipoBateria={tipoBateria}
         descricaoModelo={modeloSelecionado.descricao}
+        produtos={modeloSelecionado.produtos} // Passando produtos do modelo selecionado
       />
     </div>
   );
