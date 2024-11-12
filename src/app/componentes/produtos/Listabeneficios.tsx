@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from 'react';
-import Beneficios from './Beneficios';
+import Image from 'next/image';
 
-const ListaBeneficios = () => {
+const ListaBeneficios = () => { 
   const beneficios = [
     {
       imagem: '/images/beneficios/garantia-da-qualidade.png',
@@ -45,7 +45,13 @@ const ListaBeneficios = () => {
       >
         {beneficios.map((beneficio, index) => (
           <div key={index} className="flex flex-col items-center p-4 sm:p-6 snap-center bg-white rounded-lg shadow-md">
-            <img src={beneficio.imagem} alt={beneficio.titulo} className="w-20 h-20 mb-2 lg:mb-4" />
+            <Image 
+              src={beneficio.imagem} 
+              alt={beneficio.titulo} 
+              width={80}       // Define largura da imagem (em pixels)
+              height={80}      // Define altura da imagem (em pixels)
+              className="mb-2 lg:mb-4 object-contain" 
+              />
             <h3 className="text-xl font-semibold text-black mb-2 lg:mb-3">{beneficio.titulo}</h3>
             <p className="text-center text-gray-700 text-sm lg:text-base">{beneficio.descricao}</p>
           </div>

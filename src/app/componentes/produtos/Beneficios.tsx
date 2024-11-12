@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface BeneficioProps {
   lista: { imagem: string; titulo: string }[];
 }
@@ -17,10 +19,13 @@ const Beneficios = ({ lista }: BeneficioProps) => {
 
           {/* Espaço reservado para manter a imagem consistente */}
           <div className="flex justify-center items-center mt-[100px] mb-4">
-            <img
+            <Image
               src={beneficio.imagem}
               alt={beneficio.titulo}
-              className="w-auto h-[150px] object-contain"
+              layout="responsive" // Define layout responsivo
+              width={300}          // Largura arbitrária para ajustar a imagem
+              height={150}         // Altura fixa de 150px
+              className="object-contain"
               style={{
                 // Remover a sombra para eliminar o efeito de borda
                 boxShadow: 'none',

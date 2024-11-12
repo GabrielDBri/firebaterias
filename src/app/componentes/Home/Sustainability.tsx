@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Sustainability = () => {
   return (
@@ -11,10 +12,13 @@ const Sustainability = () => {
 
         <div className="flex flex-col md:flex-row items-center gap-8">
           <figure className="flex-1 flex justify-center h-full">
-            <img 
+          <Image 
               src="/images/beneficios/garantia-da-qualidade.png" 
               alt="Representação da garantia da qualidade e sustentabilidade" 
-              className="w-full h-full object-cover rounded-lg" 
+              layout="responsive" // Torna a imagem responsiva
+              width={600}         // Define a largura da imagem
+              height={400}        // Define a altura da imagem (ajuste conforme necessário)
+              className="object-cover rounded-lg"
             />
             <figcaption className="sr-only">Imagem ilustrativa da garantia da qualidade e do compromisso com a sustentabilidade</figcaption>
           </figure>

@@ -10,7 +10,7 @@ const VideoHighlight = () => {
             Videos for Good: Mo Scarpelli on stories that liberate
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            This month, we're shining a light on creators who use video to unearth urgent stories and tackle the issues that matter most. These creators are pushing boundaries, sparking conversations, and inspiring action in ways that resonate deeply with audiences across the globe.
+            This month, were shining a light on creators who use video to unearth urgent stories and tackle the issues that matter most. These creators are pushing boundaries, sparking conversations, and inspiring action in ways that resonate deeply with audiences across the globe.
           </p>
           <p className="text-gray-700 leading-relaxed">
             Join us as we delve into the stories and motivations behind their work, exploring the challenges they face and the impact they hope to achieve. Through this series, we hope to elevate voices that are making a difference and using the power of video to bring about change.
