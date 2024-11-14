@@ -57,9 +57,9 @@ export default function Contact() {
           <h1 className="text-2xl font-bold mb-4">Vamos conversar!</h1>
           <p className="mb-4">Se precisar de ajuda, estamos aqui para você!</p>
           <ul className="space-y-4">
-            <li><strong>Endereço:</strong> 50-460 northern Blvd East, 40, Near Patties South Carolina</li>
-            <li><strong>Telefone:</strong> +1 234 567 89</li>
-            <li><strong>Email:</strong> contact@firewebsite.com</li>
+            <li><strong>Endereço:</strong> Av. Paulo Chiaradia 316, São Vicente, ITAJUBA - MG</li>
+            <li><strong>Telefone:</strong> (35) 98812-4312 </li>
+            <li><strong>Email:</strong> lojaitajuba@firebaterias.com.br</li>
           </ul>
         </div>
         <div className="md:w-2/3 p-8 bg-white text-black">
@@ -108,7 +108,7 @@ export default function Contact() {
             <div>
               <h3 className="mb-2">Qualificação?</h3>
               <div className="flex flex-col md:flex-row md:space-x-4">
-                {['Veículos Leves', 'Veículos Pesados', 'Estacionárias', 'Solares'].map((option) => (
+                {['Veículos Leves', 'Veículos Pesados', 'Motocicletas', 'Estacionárias', 'Solares'].map((option) => (
                   <label key={option} className="flex items-center space-x-2">
                     <input
                       type="radio"

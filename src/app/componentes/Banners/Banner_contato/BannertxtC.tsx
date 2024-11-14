@@ -20,7 +20,7 @@ const BannerText = () => {
           </span>
         </h1>
         <p className="mt-1 text-lg md:mt-2 md:text-6xl font-bold font-space-grotesk">
-          O melhor para seu dia a dia
+          A energia que você precisa
         </p>
       </div>
     </div>

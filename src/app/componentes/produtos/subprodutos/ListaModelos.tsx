@@ -10,18 +10,21 @@ interface ListaModelosProps {
 const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
   const [modelosData, setModelosData] = useState<Modelo[]>([]);
   const [modeloSelecionado, setModeloSelecionado] = useState<Modelo | null>(null);
+  const [error, setError] = useState<string | null>(null); // Estado para exibir mensagens de erro
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/produtos.json");
         const data: ProdutosData = await response.json();
-
+        
+        console.log("Dados carregados:", data); // Verificar estrutura do JSON
+  
         const bateriaSelecionada = data.baterias.find((bateria) => bateria.tipo === tipoBateria);
-
+        
         if (bateriaSelecionada) {
           setModelosData(bateriaSelecionada.modelos);
-          setModeloSelecionado(bateriaSelecionada.modelos[0]); // Define o primeiro modelo como selecionado por padrão
+          setModeloSelecionado(bateriaSelecionada.modelos[0]);
         } else {
           console.error("Tipo de bateria não encontrado:", tipoBateria);
         }
@@ -30,8 +33,14 @@ const ListaModelos = ({ tipoBateria }: ListaModelosProps) => {
       }
     };
 
-    fetchData();
+    if (tipoBateria && tipoBateria !== "") {
+      fetchData();
+    }
   }, [tipoBateria]);
+
+  if (error) {
+    return <p className="text-red-500">{error}</p>;
+  }
 
   if (!modeloSelecionado) {
     return <p>Carregando modelos...</p>;

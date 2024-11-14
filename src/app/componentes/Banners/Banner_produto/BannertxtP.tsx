@@ -11,7 +11,7 @@ const BannerText = () => {
         <h1 className="text-4xl md:text-6xl font-bold font-space-grotesk">
             Baterias <span className="text-red-600 font-bold px-1" style={{ textShadow: "1px 1px 2px #ffffff" }}>FIRE</span>
         </h1>
-        <p className="mt-2 text-3xl md:text-6xl font-bold font-space-grotesk">O melhor para seu dia a dia</p>
+        <p className="mt-2 text-3xl md:text-6xl font-bold font-space-grotesk">A energia que você precisa</p>
         </div>
 
     </div>
