@@ -1,57 +1,46 @@
 import Image from "next/image";
-import { Produto } from "./types"; // Importe a interface centralizada
+import { Produto } from "./types";
+import SpecRow from "./SpecRow";
 
 const ProdutoTabela = ({ produto }: { produto: Produto }) => {
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md relative w-full md:w-80 h-auto mx-auto min-w-[300px]">
-      {/* Cabeçalho com código do produto e imagem */}
-      <div className="bg-gray-600 text-white flex items-center p-4 relative h-24">
-        <div className="absolute -top-8 left-4">
+    <div className="bg-gray-100 rounded-lg shadow-md relative w-full h-auto mx-auto p-4">
+      <div className="bg-gray-600 text-white flex items-center p-4 relative">
+        <div className="absolute -top-4 lg:-top-8 left-0">
           <Image
             src={produto.imagem}
             alt={produto.codigo}
-            width={150}
-            height={150}
+            width={120}
+            height={120}
             className="object-contain"
           />
         </div>
         <h3 className="ml-auto text-lg font-bold pr-4">{produto.codigo}</h3>
       </div>
 
-      {/* Tabela de especificações */}
       <table className="w-full text-center border-collapse border border-black mt-4">
         <tbody>
-          {/* Exibe os detalhes do produto */}
+          <SpecRow label="DIMENSÕES" value={produto.dimensoes} />
+          <SpecRow label="CAPACIDADE C100" value={produto.capacidade_c100} />
+          <SpecRow label="CAPACIDADE C20" value={produto.capacidade_c20} />
+          <SpecRow label="CAPACIDADE C10" value={produto.capacidade_c10} />
+          <SpecRow label="CAPACIDADE C120" value={produto.capacidade_c120} />
+          <SpecRow label="POLARIDADE" value={produto.polaridade} />
+          <SpecRow label="CCA (-18°C)" value={produto.cca_menos_18} />
+          <SpecRow label="CA (+25°C)" value={produto.ca_mais_25} />
+          <SpecRow label="RESERVA (RC)" value={produto.rc} />
+          <SpecRow label="CCA (-10°C)" value={produto.cca_menos_10} />
+          <SpecRow label="TEMPO ATÉ 6V" value={produto.tempo_ate_6v} />
+          <SpecRow label="CARGA LENTA" value={produto.carga_lenta} />
+          <SpecRow label="CARGA RÁPIDA" value={produto.carga_rapida} />
+          <SpecRow label="POSIÇÃO DE INSTALAÇÃO" value={produto.posicao_instalacao} />
+          <SpecRow label="GARANTIA" value={produto.garantia} />
+          <SpecRow label="TENSÃO" value={produto.tensao} />
+          <SpecRow label="TIPO DE TERMINAL" value={produto.terminal} />
+          <SpecRow label="PESO" value={produto.peso} />
+
           <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">DIMENSÕES</td>
-            <td className="p-2 border-black text-black">{produto.dimensoes}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C100</td>
-            <td className="p-2 border-black text-black">{produto.capacidade_c100}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C20</td>
-            <td className="p-2 border-black text-black">{produto.capacidade_c20}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">CAPACIDADE C10</td>
-            <td className="p-2 border-black text-black">{produto.capacidade_c10}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">GARANTIA</td>
-            <td className="p-2 border-black text-black">{produto.garantia}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">TIPO DE TERMINAL</td>
-            <td className="p-2 border-black text-black">{produto.terminal}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black">PESO</td>
-            <td className="p-2 border-black text-black">{produto.peso}</td>
-          </tr>
-          <tr className="border border-black">
-            <td className="p-2 font-bold bg-gray-200 border-r border-black text-black" colSpan={2}>
+            <td colSpan={2} className="p-2 font-bold bg-gray-200 text-black text-center">
               {produto.manutencao}
             </td>
           </tr>

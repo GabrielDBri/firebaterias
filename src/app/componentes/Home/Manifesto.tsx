@@ -5,7 +5,7 @@ const Manifesto = () => (
   <div className="relative">
     <section className="p-6 bg-red-600 text-white relative flex justify-end items-center h-44 md:h-46 lg:h-48">
       <header className="relative z-10 text-right">
-        <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold">Nosso Manifesto</h1>
+        <h1 className="text-2xl md:text-2xl lg:text-4xl font-bold">Baterias Fire</h1>
       </header>
     </section>
 

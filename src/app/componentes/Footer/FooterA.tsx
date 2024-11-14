@@ -44,7 +44,7 @@ export default function Footer() {
             <li><Link href="/produtos/veiculos-pesados" className="hover:underline">Veículos Pesados</Link></li>
             <li><Link href="/produtos/motos" className="hover:underline">Motos</Link></li>
             <li><Link href="/produtos/solares" className="hover:underline">Sistemas Solares</Link></li>
-            <li><Link href="/produtos/estacionarias" className="hover:underline">Estacionários</Link></li>
+            <li><Link href="/produtos/estacionarias" className="hover:underline">Estacionárias</Link></li>
           </ul>
         </div>
 

@@ -12,8 +12,8 @@ const Tiposbateria = ({ imagem, titulo }: ProdutoProps) => {
       <Image
         src={imagem}
         alt={titulo}
-        fill
-        className="object-cover"
+        layout="fill"
+        objectFit="cover"
         quality={75}
         loading="lazy"
       />
